@@ -1,0 +1,38 @@
+{% extends 'weatherbase.html' %}
+
+{% block content %}
+    {% if weather %}
+        <div class="w-fit flex flex-col justify-center items-center">
+            <div class="pt-12 pb-6 text-lg">
+                {{ weather.name }}'s Forecast
+            </div>
+            <div class="p-2 text-md">
+                {{ weather.weather[0].description }}
+            </div>
+            <div class="flex flex-col justify-center items-center">
+                <div class="p-2">
+                    Temperature: {{ weather.main.temp }} &deg;F
+                </div>
+                <div class="p-2">
+                    Feels Like: {{ weather.main.feels_like }} &deg;F
+                </div>
+                <div class="p-2">
+                    Min Temperature: {{ weather.main.temp_min }} &deg;F
+                </div>
+                <div class="p-2">
+                    Max Temperature: {{ weather.main.temp_max }} &deg;F
+                </div>
+                <div class="p-2">
+                    Humidity: {{ weather.main.humidity }} %rh
+                </div>
+                <div class="p-2">
+                    Wind Speed: {{ weather.wind.speed }} mph
+                </div>
+            </div>
+            <div class="p-2">
+                <button class="w-44 h-16 border border-gray-400 hover:bg-blue-600 hover:text-white active:bg-blue-500 transition active:transition-none duration-300"><a href="{{ url_for('index') }}">Search Again</a></button>
+            </div>
+        </div>
+            
+    {% endif %}
+{% endblock content %}

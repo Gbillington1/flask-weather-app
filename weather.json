@@ -1,0 +1,43 @@
+{
+    'coord': {
+        'lon': -97.6772, 
+        'lat': 30.6327
+    }, 
+    'weather': [
+        {
+            'id': 800, 
+            'main': 'Clear', 
+            'description': 'clear sky', 
+            'icon': '01n'
+        }
+    ], 
+    'base': 'stations', 
+    'main': {
+        'temp': 51.21, 
+        'feels_like': 49.41, 
+        'temp_min': 47.32, 
+        'temp_max': 57.78, 
+        'pressure': 1019, 
+        'humidity': 72
+    }, 
+    'visibility': 10000, 
+    'wind': {
+        'speed': 3.53, 
+        'deg': 99, 
+        'gust': 3.67
+    }, 
+    'clouds': {
+        'all': 0
+    }, 
+    'dt': 1647414096, 
+    'sys': {
+        'type': 2, 
+        'id': 2013267, 
+        'country': 'US', 
+        'sunrise': 1647434365, 
+        'sunset': 1647477558
+    }, 'timezone': -18000, 
+    'id': 4693342, 
+    'name': 'Georgetown', 
+    'cod': 200
+}

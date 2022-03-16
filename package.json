@@ -1,0 +1,17 @@
+{
+  "name": "flask-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./app/static/css/main.css -o ./app/static/css/build.css --watch",
+    "build": "npx tailwindcss -i ./app/static/css/main.css -o ./app/static/css/build.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.3",
+    "postcss": "^8.4.11",
+    "tailwindcss": "^3.0.23"
+  }
+}

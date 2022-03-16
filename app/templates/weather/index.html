@@ -1,0 +1,21 @@
+{% extends 'weatherbase.html' %}
+
+{% block content %}
+    <div class="p-12 text-lg">
+    Fill out the form below to get the weather for your location
+    </div>
+    <form id="locationForm" method="post" action="{{ url_for('get_weather') }}" class="flex flex-col justify-center items-center">
+        <div class="p-2">
+        <input type="text" name="city" id="city" placeholder="Your City" value="{{ request.form['city'] }}" class="p-2 border border-gray-400">
+        </div>
+        <div class="p-2">
+            <input type="text" name="state" id="state" placeholder="Your State" value="{{ request.form['state'] }}" class="p-2 border border-gray-400">
+        </div>
+        <div class="p-2">
+            <input type="text" name="country" id="country" placeholder="Your Country" value="{{ request.form['country'] }}" class="p-2 border border-gray-400">
+        </div>
+        <div class="p-2 w-full">
+            <button class="p-2 w-full border border-gray-400 hover:bg-blue-600 hover:text-white active:bg-blue-500 transition active:transition-none duration-300">Submit</button>
+        </div>
+    </form>
+{% endblock content%}
