@@ -1,7 +1,7 @@
-FROM python:3.9
+FROM nikolaik/python-nodejs
 
 # set a directory for the app
-WORKDIR /usr/src/app
+WORKDIR /usr/src/flask-weather
 
 # copy all the files to the container
 COPY . .
@@ -9,8 +9,11 @@ COPY . .
 # install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
+# build tailwind css
+RUN npm run build
+
 # define the port number the container should expose
 EXPOSE 5000
 
-# run the command
-CMD ["source", "venv/bin/activate" "&&" "flask" "run"]
+# start the app
+CMD ["flask", "run", "--host=0.0.0.0"]
