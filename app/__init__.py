@@ -4,7 +4,6 @@ import os
 # workaround for a geopy SSL error
 import ssl
 ssl._create_default_https_context = ssl._create_stdlib_context
-# import requests, json
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
